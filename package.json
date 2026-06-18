@@ -1,0 +1,17 @@
+{
+  "name": "fc26",
+  "version": "1.0.0",
+  "description": "FC26 Suite landing page — anticipatory social intelligence for elections.",
+  "scripts": {
+    "build:css": "tailwindcss -i src/input.css -o assets/tailwind.css --minify",
+    "build": "npm run build:css && rm -rf dist && mkdir -p dist && cp index.html dist/ && cp -r assets dist/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.1",
+    "tailwindcss": "^4.3.1"
+  }
+}

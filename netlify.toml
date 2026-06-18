@@ -1,0 +1,9 @@
+# Netlify build config for the FC26 landing page.
+# `npm run build` compiles the minified Tailwind stylesheet and assembles
+# a clean `dist/` (index.html + assets only) — node_modules is never published.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
