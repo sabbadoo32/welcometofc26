@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take a Shift — FC26 Console (Simulation) | #RegulateAI</title>
+    <meta name="description" content="A sample FC26 shift. Triage real-feeling (fictional) cases the way the Election Threat Cell does, then see the Threat & Influence Report your shift produces.">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="assets/tailwind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+        .reveal.in { opacity: 1; transform: none; }
+        html { scroll-behavior: smooth; }
+        .triage-card.answered .triage-btn { pointer-events: none; opacity: .5; }
+        .triage-card.answered .triage-btn.chosen { opacity: 1; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950">
+
+    <!-- SCAFFOLD NOTE (for the next UI session):
+         This is a starting point for the "Try a Shift" simulation, not a finished design.
+         - All data below is FICTIONAL by design (see the simulation banner). Never wire this to live bot output.
+         - The triage block is ported from join.html, restyled dark.
+         - The "report" block is a prototype of the Threat & Influence Report surface — the thing to iterate on.
+         - Links back to join.html assume this file sits beside it. When you move this to its own folder,
+           bring assets/ along and update the join.html links (and the CTA target in join.html).
+    -->
+
+    <!-- Console top bar -->
+    <header class="border-b border-slate-800 bg-slate-950/85 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between gap-4">
+            <div class="flex items-center gap-3 min-w-0">
+                <img src="assets/michigan-united-logo.jpg" alt="Michigan United" width="200" height="200" class="h-8 w-8 rounded-md shrink-0">
+                <span class="mono font-bold tracking-wider text-slate-200 truncate">FC26 // SHIFT CONSOLE</span>
+                <span class="hidden sm:inline mono text-[10px] uppercase tracking-widest text-amber-400 bg-amber-400/10 border border-amber-400/20 px-2 py-0.5 rounded">Simulation</span>
+            </div>
+            <div class="flex items-center gap-4 shrink-0">
+                <a href="join.html" class="text-sm text-slate-400 hover:text-emerald-400 transition hidden sm:inline">&larr; Recruiting</a>
+                <a href="join.html#apply" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-sm font-semibold px-4 py-2 rounded-lg transition">Claim a seat</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Simulation notice -->
+    <div class="bg-amber-400/10 border-b border-amber-400/20">
+        <div class="max-w-5xl mx-auto px-6 py-3 flex items-start gap-3 text-sm text-amber-200/90">
+            <span class="mono text-xs font-bold uppercase tracking-widest text-amber-400 bg-amber-400/10 border border-amber-400/30 px-2 py-1 rounded shrink-0">Simulation</span>
+            <p class="font-light">Every account, post, and score below is <strong class="font-medium text-amber-100">fictional</strong>&mdash;built to show you the judgment a shift requires and the report it produces. Nothing here is a real person or a live assessment.</p>
+        </div>
+    </div>
+
+    <!-- Intro -->
+    <section class="pt-14 pb-8">
+        <div class="max-w-3xl mx-auto px-6">
+            <p class="mono text-emerald-400 text-sm font-bold tracking-widest uppercase mb-3">Your shift</p>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight mb-4">Three items scored high enough to reach a human. That&rsquo;s you.</h1>
+            <p class="text-slate-400 font-light leading-relaxed">The pipeline already turned away the noise. What&rsquo;s left needs a judgment call: a coordinated lie, an honest mistake, or speech that&rsquo;s simply protected. Make your call on each&mdash;then scroll to see the report your shift assembles.</p>
+        </div>
+    </section>
+
+    <!-- Triage queue -->
+    <section class="pb-12">
+        <div class="max-w-3xl mx-auto px-6">
+            <div id="triage" class="space-y-6"><!-- cards injected --></div>
+
+            <div id="triage-score" class="hidden text-center mt-10 reveal">
+                <div class="inline-block bg-emerald-500/10 border border-emerald-500/30 rounded-2xl px-8 py-6">
+                    <p class="text-xl font-bold text-white">You called <span id="triage-correct" class="text-emerald-400">0</span> of 3 the way an analyst would.</p>
+                    <p class="text-slate-400 font-light text-sm mt-2">That instinct is exactly what training sharpens. Here&rsquo;s what those calls become &darr;</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The report (prototype surface) -->
+    <section class="py-12 border-t border-slate-900 bg-slate-900/20">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-10 reveal">
+                <h2 class="mono text-xs text-emerald-400 font-semibold uppercase tracking-widest mb-3">The output</h2>
+                <h3 class="text-3xl font-bold text-white tracking-tight">What your shift produces</h3>
+                <p class="text-slate-400 font-light mt-3">A shift doesn&rsquo;t end in a flag&mdash;it ends in a decision-ready brief. Below is the report assembled from <span class="text-slate-200">Queue Item 01</span> (the Dearborn case). Sample data.</p>
+            </div>
+
+            <!-- Report panel -->
+            <div class="reveal bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl shadow-black/20">
+                <!-- Report header -->
+                <div class="border-b border-slate-800 p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-900/60">
+                    <div>
+                        <span class="mono text-xs text-slate-500 block">THREAT &amp; INFLUENCE REPORT &middot; #MI-2026-0417 &middot; SAMPLE</span>
+                        <h4 class="text-lg font-bold text-white mt-1">False polling-place closure &mdash; Dearborn, Wayne County</h4>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="text-center">
+                            <span class="block mono text-2xl font-bold text-red-400 leading-none">87</span>
+                            <span class="mono text-[10px] uppercase tracking-widest text-slate-500">Severity</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="block mono text-2xl font-bold text-emerald-400 leading-none">High</span>
+                            <span class="mono text-[10px] uppercase tracking-widest text-slate-500">Confidence</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10 sections -->
+                <div class="divide-y divide-slate-800/70">
+                    <div class="p-5 flex gap-4">
+                        <span class="mono text-sm font-bold text-emerald-400 shrink-0">01</span>
+                        <div><h5 class="text-sm font-semibold text-white mb-1">Executive Threat Summary</h5><p class="text-sm text-slate-400 font-light leading-relaxed">Coordinated false claim that a real, open polling site (Lincoln Elementary) is closed and votes must be cast elsewhere. Active, rising, voter-facing. Recommend immediate verified correction via county clerk channels.</p></div>
+                    </div>
+                    <div class="p-5 flex gap-4">
+                        <span class="mono text-sm font-bold text-emerald-400 shrink-0">02</span>
+                        <div><h5 class="text-sm font-semibold text-white mb-1">Threat Landscape Overview</h5><p class="text-sm text-slate-400 font-light leading-relaxed">Classified as disinformation + coordinated inauthentic behavior. 41 near-identical posts across 2 platforms in a 6-minute window; footprint concentrated in Wayne County feeds.</p></div>
+                    </div>
+                    <div class="p-5 flex gap-4">
+                        <span class="mono text-sm font-bold text-emerald-400 shrink-0">03</span>
+                        <div><h5 class="text-sm font-semibold text-white mb-1">Narrative &amp; Disinformation Analysis</h5><p class="text-sm text-slate-400 font-light leading-relaxed">Core false premise: &ldquo;your polling place is closed.&rdquo; Camouflaged with a real, nearby school name to feel locally credible. Mutation watch: a &ldquo;flooding&rdquo; pretext likely to shift to &ldquo;power outage&rdquo; if debunked.</p></div>
+                    </div>
+                    <div class="p-5 flex gap-4">
+                        <span class="mono text-sm font-bold text-emerald-400 shrink-0">04</span>
+                        <div><h5 class="text-sm font-semibold text-white mb-1">Persuasion &amp; Influence Techniques</h5><p class="text-sm text-slate-400 font-light leading-relaxed">Manufactured urgency (&ldquo;before it&rsquo;s too late&rdquo;), false authority, and a share-imperative. Distinguished from protected civic frustration by the actionable, false operational instruction.</p></div>
+                    </div>
+                    <div class="p-5 flex gap-4">
+                        <span class="mono text-sm font-bold text-emerald-400 shrink-0">05</span>
+                        <div><h5 class="text-sm font-semibold text-white mb-1">Actor &amp; Network Intelligence</h5><p class="text-sm text-slate-400 font-light leading-relaxed">Patient Zero: a 3-day-old account; amplifiers show synchronized posting and copy-pasta signatures. Pattern consistent with a low-cost, for-hire amplification setup rather than organic spread.</p></div>
+                    </div>
+                    <div class="p-5 flex gap-4">
+                        <span class="mono text-sm font-bold text-emerald-400 shrink-0">06</span>
+                        <div><h5 class="text-sm font-semibold text-white mb-1">Target &amp; Impact Assessment</h5><p class="text-sm text-slate-400 font-light leading-relaxed">Targets voters in a single precinct on election day&mdash;high-consequence, time-sensitive. Early engagement suggests some users acting on (resharing) the claim, not just viewing.</p></div>
+                    </div>
+                    <div class="p-5 flex gap-4">
+                        <span class="mono text-sm font-bold text-emerald-400 shrink-0">07</span>
+                        <div><h5 class="text-sm font-semibold text-white mb-1">Risk &amp; Escalation Assessment</h5><p class="text-sm text-slate-400 font-light leading-relaxed">Severity 87/100. Moderate-to-high odds of local mainstream pickup within hours. Real-world hazard: voters diverted from a valid polling location.</p></div>
+                    </div>
+                    <div class="p-5 flex gap-4">
+                        <span class="mono text-sm font-bold text-emerald-400 shrink-0">08</span>
+                        <div><h5 class="text-sm font-semibold text-white mb-1">Countermeasure &amp; Mitigation Options</h5><p class="text-sm text-slate-400 font-light leading-relaxed">Confirm status with Wayne County Clerk; publish a verified correction; alert local partners and platform safety contacts. Pre-bunk the likely &ldquo;power outage&rdquo; mutation.</p></div>
+                    </div>
+                    <div class="p-5 flex gap-4">
+                        <span class="mono text-sm font-bold text-emerald-400 shrink-0">09</span>
+                        <div><h5 class="text-sm font-semibold text-white mb-1">Confidence, Limitations &amp; Assumptions</h5><p class="text-sm text-slate-400 font-light leading-relaxed">High confidence on coordination; medium on actor motive. Blind spot: encrypted/closed-group seeding upstream is not observable. False-positive risk logged and low.</p></div>
+                    </div>
+                    <div class="p-5 flex gap-4">
+                        <span class="mono text-sm font-bold text-emerald-400 shrink-0">10</span>
+                        <div><h5 class="text-sm font-semibold text-white mb-1">Ongoing Monitoring Signals</h5><p class="text-sm text-slate-400 font-light leading-relaxed">Watch for the mutation pretext, new amplifier accounts &lt;7 days old, and spread to adjacent precincts. Threshold to upgrade to crisis: confirmed mainstream pickup or &gt;100 amplifiers.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center text-xs text-slate-600 font-light mt-6 reveal">Prototype report surface &middot; sample data &middot; layout to be refined.</p>
+        </div>
+    </section>
+
+    <!-- Loop back -->
+    <section class="py-20 border-t border-slate-900 text-center">
+        <div class="max-w-2xl mx-auto px-6">
+            <h3 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mb-4">That was a simulation. The real thing needs you.</h3>
+            <p class="text-slate-400 font-light mb-8">Every shift, all the way to the polls&mdash;organized people watching in real time. We&rsquo;re recruiting 25.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="join.html#apply" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold px-6 py-3 rounded-lg text-sm transition">Claim a seat &rarr;</a>
+                <a href="join.html" class="border border-slate-700 hover:border-slate-500 text-slate-300 font-medium px-6 py-3 rounded-lg text-sm transition">Back to recruiting</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-slate-900 py-10 text-center text-xs text-slate-500">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <span class="mono tracking-wide">FC26 // SHIFT CONSOLE &middot; SIMULATION</span>
+            <span class="font-light">Michigan United &middot; #RegulateAI &middot; sample data, not a live assessment</span>
+        </div>
+    </footer>
+
+    <script>
+    (function () {
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(function (n) { io.observe(n); });
+
+        var cases = [
+            {
+                handle: '@MI_VoteAlert_2026', meta: 'New account · 3 days old · identical text on 41 profiles in 6 min',
+                post: 'BREAKING: Polling place at Lincoln Elementary in Dearborn is CLOSED today due to flooding. Go to the high school instead. SHARE before it’s too late!!',
+                answer: 'disinfo', verdict: 'Disinformation',
+                why: 'A specific, false, <em>actionable</em> claim about how to vote, pushed by a fresh account with copy-pasta synchronized across dozens of profiles — the fingerprint of coordination.',
+                action: 'Verify with the county clerk in minutes, then issue a clear, accurate update where the confusion is spreading. The post stays up — the truth travels with it.'
+            },
+            {
+                handle: '@dearbornmom', meta: 'Real account · 4 years old · 1 post, no amplification',
+                post: 'Reminder to everyone: don’t forget to vote this Tuesday the 4th! 🗳️',
+                answer: 'misinfo', verdict: 'Misinformation (honest mistake)',
+                why: 'The date is wrong, but there’s no coordination, no fresh account, no synchronized spread — just one neighbor who mixed up the day in good faith. Intent is the dividing line.',
+                action: 'A gentle, factual correction. No alarm, no actor profile. We treat an honest mix-up very differently from an engineered lie.'
+            },
+            {
+                handle: '@frustrated_voter', meta: 'Real account · normal activity',
+                post: 'TWO HOURS in line at my precinct in the pouring rain and only 3 machines working. This is a disgrace, they should be ashamed.',
+                answer: 'protected', verdict: 'Protected speech',
+                why: 'Messy, angry, civic frustration — and entirely legitimate. There’s no false operational claim here, just a citizen’s honest experience and opinion.',
+                action: 'Nothing. Frustration, long lines, weather complaints, and political debate are protected by design. Flagging this would be exactly the overreach we refuse.'
+            }
+        ];
+        var labels = { disinfo: 'Coordinated disinformation', misinfo: 'Honest mistake (misinformation)', protected: 'Protected speech — leave it' };
+        var order = ['disinfo', 'misinfo', 'protected'];
+        var answered = 0, correct = 0, wrap = document.getElementById('triage');
+
+        cases.forEach(function (c, i) {
+            var card = document.createElement('div');
+            card.className = 'triage-card reveal bg-slate-900 border border-slate-800 rounded-2xl p-6';
+            io.observe(card);
+            var btns = order.map(function (k) {
+                return '<button data-k="' + k + '" class="triage-btn text-left text-sm border border-slate-700 hover:border-emerald-500/60 rounded-lg px-4 py-3 transition font-medium text-slate-300 bg-slate-900">' + labels[k] + '</button>';
+            }).join('');
+            card.innerHTML =
+                '<div class="flex items-center gap-3 mb-3">' +
+                    '<span class="mono text-xs text-slate-500">QUEUE ITEM 0' + (i + 1) + '</span>' +
+                    '<span class="mono text-xs text-amber-400 bg-amber-400/10 border border-amber-400/20 rounded px-2 py-0.5">flagged · needs a human</span>' +
+                '</div>' +
+                '<blockquote class="text-slate-100 leading-relaxed border-l-2 border-slate-700 pl-4 mb-2">' + c.post + '</blockquote>' +
+                '<p class="text-xs text-slate-500 mb-5"><span class="font-medium text-slate-400">' + c.handle + '</span> &middot; ' + c.meta + '</p>' +
+                '<div class="grid sm:grid-cols-3 gap-2">' + btns + '</div>' +
+                '<div class="triage-reveal hidden mt-5 rounded-xl p-5"></div>';
+
+            card.querySelectorAll('.triage-btn').forEach(function (b) {
+                b.addEventListener('click', function () {
+                    var chose = b.getAttribute('data-k'), right = chose === c.answer;
+                    card.classList.add('answered');
+                    b.classList.add('chosen', right ? 'border-emerald-500' : 'border-red-400', right ? 'bg-emerald-500/10' : 'bg-red-500/10');
+                    if (!right) card.querySelector('.triage-btn[data-k="' + c.answer + '"]').classList.add('border-emerald-500', 'bg-emerald-500/10', 'chosen');
+                    var rev = card.querySelector('.triage-reveal');
+                    rev.className = 'triage-reveal mt-5 rounded-xl p-5 ' + (right ? 'bg-emerald-500/10 border border-emerald-500/30' : 'bg-amber-400/10 border border-amber-400/30');
+                    rev.innerHTML =
+                        '<p class="text-sm font-semibold ' + (right ? 'text-emerald-300' : 'text-amber-300') + ' mb-1">' +
+                            (right ? '✓ Agreed — ' : 'An analyst would call this ') + c.verdict + '</p>' +
+                        '<p class="text-sm text-slate-300 font-light leading-relaxed mb-2"><strong class="font-medium text-slate-200">Why:</strong> ' + c.why + '</p>' +
+                        '<p class="text-sm text-slate-300 font-light leading-relaxed"><strong class="font-medium text-slate-200">The cell’s move:</strong> ' + c.action + '</p>';
+                    rev.classList.remove('hidden');
+                    answered++; if (right) correct++;
+                    if (answered === cases.length) {
+                        document.getElementById('triage-correct').textContent = correct;
+                        var s = document.getElementById('triage-score'); s.classList.remove('hidden'); s.classList.add('in');
+                    }
+                });
+            });
+            wrap.appendChild(card);
+        });
+    })();
+    </script>
+</body>
+</html>

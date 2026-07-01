@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Election Threat Cell | FC26 · CivicAI · #RegulateAI</title>
+    <meta name="description" content="Help us protect the 2026 election. Join the FC26 Election Threat Cell—a trained, certified, statewide team that monitors and acts on social media disinformation before it spreads. We're recruiting 25 volunteers. A CivicAI program under Michigan United's #RegulateAI campaign.">
+    <meta property="og:title" content="Join the Election Threat Cell | #RegulateAI">
+    <meta property="og:description" content="Join a team that monitors and acts on social media disinformation before it spreads. We're recruiting 25 volunteers to the Election Threat Cell. Trained, certified, statewide.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="assets/tailwind.css">
+    <!-- EveryAction / NGP VAN ActionTag (member-database form) -->
+    <link rel="preload" href="https://static.everyaction.com/ea-actiontag/at.js" as="script" crossorigin="anonymous">
+    <link rel="preload" href="https://static.everyaction.com/ea-actiontag/at.min.css" as="style">
+    <script type="text/javascript" src="https://static.everyaction.com/ea-actiontag/at.js" crossorigin="anonymous"></script>
+    <link rel="preload" href="https://nvlupin.blob.core.windows.net/designs/CustomStylesheet_a963be5bd5a7a825e9e54f0cae6e7822f5fa33baef85268851759738ff3e18eb.css" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #faf7f1;
+            --cream-panel: #f3ede3;
+            --ink: #2a2622;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--cream); color: var(--ink); }
+        .display { font-family: 'Fraunces', Georgia, serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        /* Sunrise mark for Michigan United-style wordmark */
+        .sunrise { background: radial-gradient(circle at 50% 100%, #f59e0b 0%, #fbbf24 35%, #34d399 36%, #10b981 70%, transparent 71%); }
+        /* Reveal-on-scroll */
+        .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+        .reveal.in { opacity: 1; transform: none; }
+        html { scroll-behavior: smooth; }
+        .triage-card.answered .triage-btn { pointer-events: none; opacity: .55; }
+        .triage-card.answered .triage-btn.chosen { opacity: 1; }
+    </style>
+</head>
+<body class="antialiased selection:bg-amber-200 selection:text-stone-900">
+
+    <!-- Header -->
+    <header class="border-b border-stone-200 bg-[var(--cream)]/85 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#top" class="flex items-center gap-2.5">
+                <img src="assets/michigan-united-logo.jpg" alt="Michigan United" width="200" height="200" class="h-9 w-9 rounded-md shrink-0">
+                <span class="mono text-[10px] tracking-widest text-amber-700 uppercase border-l border-stone-300 pl-2.5">#RegulateAI</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-stone-500">
+                <a href="#why-now" class="hover:text-amber-700 transition">Why Now</a>
+                <a href="#how" class="hover:text-amber-700 transition">How a Shift Works</a>
+                <a href="shift.html" class="hover:text-amber-700 transition">Sample Messages</a>
+                <a href="#ladder" class="hover:text-amber-700 transition">The Skill Builds</a>
+                <a href="index.html" class="hover:text-amber-700 transition inline-flex items-center gap-1">The FC26 Engine <span class="text-xs">&#8599;</span></a>
+            </nav>
+            <a href="#apply" class="bg-stone-900 hover:bg-stone-800 text-[var(--cream)] text-sm font-semibold px-4 py-2 rounded-lg transition shadow-sm">Join the Cell</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="top" class="relative pt-20 pb-16 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(245,158,11,0.10),transparent_50%)]"></div>
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="inline-flex items-center gap-2 text-xs font-semibold mono uppercase tracking-widest text-amber-700 bg-amber-100/70 border border-amber-200 rounded-full px-3 py-1 mb-6">
+                <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                CivicAI Program &middot; Election Threat Cell
+            </div>
+            <h1 class="display text-4xl md:text-6xl font-600 text-stone-900 tracking-tight leading-[1.05] mb-6 max-w-3xl" style="font-weight:600;">
+                Help us protect the <span class="text-amber-700">&rsquo;26 election.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-stone-600 font-light max-w-2xl mb-9 leading-relaxed">
+                Join a team that monitors and acts on social media disinformation. We&rsquo;re recruiting <strong class="font-medium text-stone-800">25 volunteers</strong> to the Election Threat Cell. Trained, certified, statewide.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                <a href="#apply" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold px-6 py-3 rounded-lg text-sm transition shadow-lg shadow-amber-600/20">Claim a Seat &rarr;</a>
+                <a href="shift.html" class="border border-stone-300 hover:border-stone-400 bg-white/60 text-stone-700 font-medium px-6 py-3 rounded-lg text-sm transition">See sample messages</a>
+            </div>
+
+            <!-- Founding cohort (static) -->
+            <div class="max-w-md bg-white/70 border border-stone-200 rounded-2xl p-5 shadow-sm">
+                <span class="mono text-xs uppercase tracking-widest text-stone-500">Founding cohort</span>
+                <p class="text-sm text-stone-600 mt-2">The first <strong class="text-stone-900">25 volunteers</strong> to staff the cell&mdash;help build it from the ground up.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How a shift works: Human in the loop -->
+    <section id="how" class="py-20 border-t border-stone-200 bg-[var(--cream-panel)]/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- What FC26 is -->
+            <div class="max-w-3xl mb-16 reveal">
+                <h2 class="mono text-xs text-amber-700 font-semibold uppercase tracking-widest mb-3">The machine behind the cell</h2>
+                <h3 class="display text-3xl md:text-4xl font-600 text-stone-900 tracking-tight mb-5" style="font-weight:600;">FC26 is the first system built for this.</h3>
+                <p class="text-stone-600 font-light leading-relaxed mb-5">FC26 is an early-warning system for elections&mdash;the first machine purpose-built to separate coordinated disinformation and inauthentic behavior from ordinary discourse, trace who&rsquo;s behind it, and anticipate its next move <em>before</em> it spreads. A multi-stage AI pipeline filters the firehose by keyword and geography&mdash;down to your counties&mdash;then reads each signal for <strong class="font-medium text-stone-800">intent</strong>: who is doing what to whom, not just the words it uses. Every signal is scored against a fixed rubric and filed as a structured <strong class="font-medium text-stone-800">Threat &amp; Influence Report</strong>. The cell acts on that&mdash;signal, not noise.</p>
+                <a href="https://fc26socialintelligence.netlify.app/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700 hover:text-amber-800 transition">See the machine &amp; its dashboard <span aria-hidden="true">&#8599;</span></a>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="reveal">
+                    <h2 class="mono text-xs text-amber-700 font-semibold uppercase tracking-widest mb-3">When tracking lies in social media</h2>
+                    <h3 class="display text-3xl md:text-4xl font-600 text-stone-900 tracking-tight mb-6" style="font-weight:600;">You are the judgment the machine can&rsquo;t make.</h3>
+                    <p class="display text-xl md:text-2xl text-stone-900 leading-snug mb-5" style="font-weight:500;">As a Cell member, your job is to review the edge cases and the worst of the <span class="text-amber-700">Threat &amp; Influence Reports</span>.</p>
+                    <p class="text-stone-600 font-light mb-5 leading-relaxed">The machine does the heavy lifting; what reaches you is the handful that scored high enough to need a human&mdash;the most immediately actionable. It&rsquo;s a real call about whether a claim is a coordinated lie, an honest mistake, or simply someone&rsquo;s protected opinion. You verify, you name the technique, and you help draft a response that addresses <strong class="font-medium text-stone-800">both the facts and the manipulation</strong>.</p>
+                    <p class="text-stone-600 font-light mb-6 leading-relaxed">You won&rsquo;t wade through endless internet noise. An AI pipeline reads the firehose&mdash;millions of posts&mdash;auditing intent, source credibility, emotional load, and coordination. It turns away the obvious noise at the door.</p>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3 bg-white border border-stone-200 rounded-xl p-4">
+                            <span class="mono text-xs font-bold text-amber-700 bg-amber-50 border border-amber-200 rounded px-2 py-1 shrink-0">INTENT</span>
+                            <p class="text-sm text-stone-600 font-light"><strong class="text-stone-800 font-medium">Reads who&rsquo;s doing what to whom&mdash;not just keywords.</strong> The machine judges a claim by its structure&mdash;subject, action, object&mdash;so reworded attacks don&rsquo;t slip past, and vague outrage doesn&rsquo;t flood your queue.</p>
+                        </div>
+                        <div class="flex items-start gap-3 bg-white border border-stone-200 rounded-xl p-4">
+                            <span class="mono text-xs font-bold text-emerald-600 bg-emerald-50 border border-emerald-200 rounded px-2 py-1 shrink-0">30 MIN</span>
+                            <p class="text-sm text-stone-600 font-light"><strong class="text-stone-800 font-medium">The 30-minute standard.</strong> Every flagged report gets a human set of eyes within 30 minutes. That&rsquo;s the standard.</p>
+                        </div>
+                        <div class="flex items-start gap-3 bg-white border border-stone-200 rounded-xl p-4">
+                            <span class="mono text-xs font-bold text-amber-700 bg-amber-50 border border-amber-200 rounded px-2 py-1 shrink-0">LOCAL</span>
+                            <p class="text-sm text-stone-600 font-light"><strong class="text-stone-800 font-medium">Distributed by design.</strong> Local volunteers recognize local context faster than any centralized team. The network spans the state.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Funnel visual -->
+                <div class="reveal bg-white border border-stone-200 rounded-2xl p-7 shadow-sm">
+                    <div class="space-y-3">
+                        <div class="rounded-xl bg-stone-100 border border-stone-200 p-4 text-center">
+                            <span class="mono text-xs text-stone-500 block">RAW INTAKE &middot; handled by AI</span>
+                            <span class="display text-2xl text-stone-800" style="font-weight:600;">~ millions / min</span>
+                            <p class="text-xs text-stone-500 mt-1">social media &middot; news &middot; the open web</p>
+                        </div>
+                        <div class="flex justify-center"><span class="text-stone-300 text-xs">&darr; filtered by keyword + geofence &mdash; noise turned away at the door</span></div>
+                        <div class="rounded-xl bg-amber-50 border border-amber-200 p-4 text-center mx-6">
+                            <span class="mono text-xs text-amber-700 block mb-1">ANALYZED &amp; SCORED</span>
+                            <span class="text-sm text-stone-700 font-medium">intent &middot; emotion &middot; coordination &middot; source credibility</span>
+                        </div>
+                        <div class="flex justify-center"><span class="text-stone-300 text-xs">&darr; scores high enough to matter</span></div>
+                        <div class="rounded-xl bg-emerald-600 text-white p-5 text-center mx-12 shadow-md shadow-emerald-600/20">
+                            <span class="mono text-xs text-emerald-100 block">YOUR QUEUE</span>
+                            <span class="display text-xl" style="font-weight:600;">a human decision</span>
+                            <p class="text-xs text-emerald-100 mt-1">verify &middot; name the technique &middot; respond</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The skill builds -->
+    <section id="ladder" class="py-20 border-t border-stone-200">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+                <h2 class="mono text-xs text-amber-700 font-semibold uppercase tracking-widest mb-3">Trained &amp; certified</h2>
+                <h3 class="display text-3xl md:text-4xl font-600 text-stone-900 tracking-tight" style="font-weight:600;">You leave knowing how to do this. The skill builds.</h3>
+                <p class="text-stone-600 font-light mt-4 leading-relaxed">You can start with zero experience. We teach you everything&mdash;how we score a threat, the tools we use, the whole method&mdash;and each step builds on the last. Click a rung to see what you&rsquo;d learn.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 items-start">
+                <div class="space-y-2" id="ladder-nav">
+                    <button data-rung="0" class="ladder-btn w-full text-left bg-white border border-stone-200 rounded-xl p-4 transition hover:border-amber-300 flex items-center gap-4">
+                        <span class="mono text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded px-2 py-1">01</span>
+                        <span class="font-semibold text-stone-800">Fact-Checker</span>
+                    </button>
+                    <button data-rung="1" class="ladder-btn w-full text-left bg-white border border-stone-200 rounded-xl p-4 transition hover:border-amber-300 flex items-center gap-4">
+                        <span class="mono text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded px-2 py-1">02</span>
+                        <span class="font-semibold text-stone-800">Persuasion Analyst</span>
+                    </button>
+                    <button data-rung="2" class="ladder-btn w-full text-left bg-white border border-stone-200 rounded-xl p-4 transition hover:border-amber-300 flex items-center gap-4">
+                        <span class="mono text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded px-2 py-1">03</span>
+                        <span class="font-semibold text-stone-800">Pattern Analyst</span>
+                    </button>
+                    <button data-rung="3" class="ladder-btn w-full text-left bg-white border border-stone-200 rounded-xl p-4 transition hover:border-amber-300 flex items-center gap-4">
+                        <span class="mono text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded px-2 py-1">04</span>
+                        <span class="font-semibold text-stone-800">Specialist</span>
+                    </button>
+                </div>
+                <div id="ladder-detail" class="bg-white border border-stone-200 rounded-2xl p-7 shadow-sm min-h-[16rem]">
+                    <!-- injected -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Take a shift: interactive triage demo -->
+    <section id="shift" class="py-20 border-t border-stone-200">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+                <h2 class="mono text-xs text-amber-700 font-semibold uppercase tracking-widest mb-3">Take a shift</h2>
+                <h3 class="display text-3xl md:text-4xl font-600 text-stone-900 tracking-tight" style="font-weight:600;">Three items hit your queue. What&rsquo;s your call?</h3>
+                <p class="text-stone-600 font-light mt-4 leading-relaxed">This is the real call the cell makes every shift&mdash;and you don&rsquo;t need any training to try it. Go with your gut on each one, then see how a trained analyst would read it. It all comes down to one line: is this a coordinated lie, an honest mistake, or just someone&rsquo;s opinion?</p>
+            </div>
+
+            <div id="triage" class="space-y-6">
+                <!-- Cards injected by JS -->
+            </div>
+
+            <div id="triage-score" class="hidden text-center mt-10 reveal">
+                <div class="inline-block bg-emerald-50 border border-emerald-200 rounded-2xl px-8 py-6">
+                    <p class="display text-2xl text-stone-900" style="font-weight:600;">You called <span id="triage-correct" class="text-emerald-700">0</span> of 3 the way an analyst would.</p>
+                    <p class="text-stone-600 font-light text-sm mt-2">That instinct is exactly what we train and sharpen. Ready to do it for real?</p>
+                    <a href="#apply" class="inline-block mt-4 bg-amber-600 hover:bg-amber-700 text-white font-semibold px-6 py-3 rounded-lg text-sm transition">Claim a seat &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why now: the convergence -->
+    <section id="why-now" class="py-20 border-t border-stone-200 bg-[var(--cream-panel)]/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-2xl mb-12 reveal">
+                <h2 class="mono text-xs text-amber-700 font-semibold uppercase tracking-widest mb-3">Why now</h2>
+                <h3 class="display text-3xl md:text-4xl font-600 text-stone-900 tracking-tight" style="font-weight:600;">When this many people agree, it&rsquo;s not politics. It&rsquo;s a reckoning.</h3>
+                <p class="text-stone-600 font-light mt-4 leading-relaxed">For years, &ldquo;regulate AI&rdquo; meant wait and see&mdash;trust the companies, let innovation lead. That consensus has collapsed. These aren&rsquo;t the same people making the same argument. They&rsquo;re reaching the same conclusion.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="reveal bg-white border border-stone-200 rounded-2xl p-6 shadow-sm">
+                    <span class="mono text-xs text-amber-700">01</span>
+                    <h4 class="display text-lg text-stone-900 mt-2 mb-2" style="font-weight:600;">The Pope speaks</h4>
+                    <p class="text-sm text-stone-600 font-light leading-relaxed">May 2026 &mdash; Pope Leo XIV&rsquo;s encyclical <em>Magnifica Humanitas</em> calls for robust legal frameworks, independent oversight, and active political involvement. Ethics in the abstract is not enough.</p>
+                </div>
+                <div class="reveal bg-white border border-stone-200 rounded-2xl p-6 shadow-sm">
+                    <span class="mono text-xs text-amber-700">02</span>
+                    <h4 class="display text-lg text-stone-900 mt-2 mb-2" style="font-weight:600;">Legal scholars act</h4>
+                    <p class="text-sm text-stone-600 font-light leading-relaxed">Ifeoma Ajunwa, <em>Georgetown Law Journal</em> (2026): the breakneck speed of AI threatens due process and equal opportunity. Centralized legal intervention is necessary.</p>
+                </div>
+                <div class="reveal bg-white border border-stone-200 rounded-2xl p-6 shadow-sm">
+                    <span class="mono text-xs text-amber-700">03</span>
+                    <h4 class="display text-lg text-stone-900 mt-2 mb-2" style="font-weight:600;">The model legislation</h4>
+                    <p class="text-sm text-stone-600 font-light leading-relaxed">Two winnable bills move in Michigan: the <strong class="font-medium">Deepfake Identity Protection Act</strong> and the <strong class="font-medium">Political Advertising Accountability Act</strong>. Disclosure&mdash;without the government deciding what&rsquo;s true.</p>
+                </div>
+                <div class="reveal bg-stone-900 text-[var(--cream)] border border-stone-900 rounded-2xl p-6 shadow-sm">
+                    <span class="mono text-xs text-amber-400">04</span>
+                    <h4 class="display text-lg mt-2 mb-2" style="font-weight:600;">Michigan moves</h4>
+                    <p class="text-sm text-stone-300 font-light leading-relaxed">Organizers advance the law on the ground. The moment for voluntary ethics has passed. The moment for law&mdash;and for the people who watch&mdash;has arrived.</p>
+                </div>
+            </div>
+            <p class="text-stone-500 font-light mt-10 text-sm max-w-2xl reveal">The encyclical names it plainly: a more moral AI isn&rsquo;t enough if that morality is set privately by a small number of actors. What&rsquo;s needed is active public involvement. <strong class="text-stone-700">This is where you come in.</strong></p>
+        </div>
+    </section>
+
+    <!-- Where you fit -->
+    <section class="py-16 border-t border-stone-200">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="mono text-xs text-amber-700 font-semibold uppercase tracking-widest mb-8 text-center reveal">Where you&rsquo;d fit</h2>
+            <div class="flex flex-wrap items-center justify-center gap-2 text-sm reveal">
+                <span class="bg-white border border-stone-200 rounded-lg px-4 py-2.5 text-stone-600">Michigan United</span>
+                <span class="text-stone-400">&rarr;</span>
+                <span class="bg-white border border-stone-200 rounded-lg px-4 py-2.5 text-stone-600">#RegulateAI campaign</span>
+                <span class="text-stone-400">&rarr;</span>
+                <span class="bg-white border border-stone-200 rounded-lg px-4 py-2.5 text-stone-600">CivicAI program</span>
+                <span class="text-stone-400">&rarr;</span>
+                <span class="bg-amber-600 border border-amber-600 rounded-lg px-4 py-2.5 text-white font-semibold shadow-sm">Election Threat Cell &mdash; you</span>
+            </div>
+            <p class="text-center text-stone-500 font-light mt-6 text-sm max-w-2xl mx-auto reveal">Not the government. Not a tech company. Just organized people&mdash;with the tools and training to protect the information their neighbors rely on to vote. <strong class="text-stone-700">Neighbors looking out for neighbors, built to actually work.</strong></p>
+        </div>
+    </section>
+
+    <!-- Two ways to serve -->
+    <section class="py-20 border-t border-stone-200">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+                <h2 class="mono text-xs text-amber-700 font-semibold uppercase tracking-widest mb-3">Two ways to serve</h2>
+                <h3 class="display text-3xl md:text-4xl font-600 text-stone-900 tracking-tight" style="font-weight:600;">The people who watch&mdash;and the people who guide.</h3>
+            </div>
+            <div class="grid lg:grid-cols-3 gap-6 items-stretch">
+                <!-- Volunteers: primary, spans 2 -->
+                <div class="lg:col-span-2 reveal bg-stone-900 text-[var(--cream)] rounded-2xl p-8 shadow-lg flex flex-col">
+                    <span class="mono text-xs uppercase tracking-widest text-amber-400 mb-3">The cell &middot; we need 25</span>
+                    <h4 class="display text-2xl mb-3" style="font-weight:600;">Information Integrity Volunteer</h4>
+                    <p class="text-stone-300 font-light leading-relaxed mb-5">You look at what the system flags, check the evidence, and help write the response. You don&rsquo;t need to be an expert on day one&mdash;you need curiosity, good judgment, and a reason to care about your community. We&rsquo;ll teach you the rest.</p>
+                    <ul class="space-y-2 text-sm text-stone-300 font-light mb-6">
+                        <li class="flex gap-2"><span class="text-emerald-400">&check;</span> A Michigan resident or student with a stake in local civic life</li>
+                        <li class="flex gap-2"><span class="text-emerald-400">&check;</span> Curious about online research (OSINT), data, social media&mdash;or just the truth</li>
+                        <li class="flex gap-2"><span class="text-emerald-400">&check;</span> Flexible, shift-based remote time&mdash;a few hours when you can</li>
+                        <li class="flex gap-2"><span class="text-emerald-400">&check;</span> Committed to staying non-partisan and telling the truth</li>
+                    </ul>
+                    <a href="#apply" class="mt-auto inline-block bg-amber-600 hover:bg-amber-700 text-white font-semibold px-6 py-3 rounded-lg text-sm transition text-center">Apply to the cell &rarr;</a>
+                </div>
+                <!-- Committee: secondary -->
+                <div class="reveal bg-white border border-stone-200 rounded-2xl p-8 shadow-sm flex flex-col">
+                    <span class="mono text-xs uppercase tracking-widest text-amber-700 mb-3">Steering committee</span>
+                    <h4 class="display text-2xl text-stone-900 mb-3" style="font-weight:600;">Advisory &amp; Operations</h4>
+                    <p class="text-stone-600 font-light leading-relaxed mb-5 text-sm">A non-partisan board of Michigan&rsquo;s pollsters, communications professionals, and analysts who guide the cell&rsquo;s work:</p>
+                    <ul class="space-y-3 text-sm text-stone-600 font-light mb-6">
+                        <li><strong class="text-stone-800 font-medium">Pollsters</strong> &mdash; read how a story is shifting against real voter mood, so we know which threats actually matter.</li>
+                        <li><strong class="text-stone-800 font-medium">Communicators</strong> &mdash; build fast, fact-checked responses that meet a false claim with the truth.</li>
+                        <li><strong class="text-stone-800 font-medium">Analysts</strong> &mdash; follow how a claim spreads and who&rsquo;s pushing it.</li>
+                    </ul>
+                    <a href="#apply" class="mt-auto inline-block border border-stone-300 hover:border-stone-400 text-stone-700 font-medium px-6 py-3 rounded-lg text-sm transition text-center">Advise the cell</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What we are / are not -->
+    <section class="py-20 border-t border-stone-200 bg-[var(--cream-panel)]/50">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+                <h2 class="mono text-xs text-amber-700 font-semibold uppercase tracking-widest mb-3">Honest about the line</h2>
+                <h3 class="display text-3xl md:text-4xl font-600 text-stone-900 tracking-tight" style="font-weight:600;">Not activism. Democracy with better tools.</h3>
+                <p class="text-stone-600 font-light mt-4 leading-relaxed">The fastest way to lose trust is to blur this line. So we won&rsquo;t. Here&rsquo;s exactly what the cell does&mdash;and what it refuses to do.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-5">
+                <div class="reveal bg-white border border-emerald-200 rounded-2xl p-6">
+                    <h4 class="font-semibold text-emerald-800 mb-3 flex items-center gap-2"><span>&check;</span> What we do</h4>
+                    <ul class="space-y-2.5 text-sm text-stone-600 font-light">
+                        <li>Flag coordinated, false claims that could actually change what someone does&mdash;like a real polling place falsely reported as closed.</li>
+                        <li>Check them against official local sources and put out accurate info where people are confused.</li>
+                        <li>Say how sure we are&mdash;and admit our blind spots&mdash;instead of acting certain.</li>
+                        <li>Keep a human in charge of every call that matters.</li>
+                    </ul>
+                </div>
+                <div class="reveal bg-white border border-stone-200 rounded-2xl p-6">
+                    <h4 class="font-semibold text-stone-800 mb-3 flex items-center gap-2"><span class="text-stone-400">&times;</span> What we don&rsquo;t do</h4>
+                    <ul class="space-y-2.5 text-sm text-stone-600 font-light">
+                        <li>We have no link to the social media companies&mdash;<strong class="text-stone-800 font-medium">we can&rsquo;t delete posts or block anyone.</strong> We&rsquo;re a radar, not a referee.</li>
+                        <li>We don&rsquo;t review viewpoints. Frustration, long lines, weather complaints, and political debate are protected by design.</li>
+                        <li>We don&rsquo;t decide what&rsquo;s true on anyone&rsquo;s behalf&mdash;disclosure, not censorship.</li>
+                        <li>We&rsquo;re non-partisan. Full stop.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apply -->
+    <section id="apply" class="py-20 border-t border-stone-200">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-10 reveal">
+                <h2 class="mono text-xs text-amber-700 font-semibold uppercase tracking-widest mb-3">It&rsquo;s time</h2>
+                <h3 class="display text-3xl md:text-4xl font-600 text-stone-900 tracking-tight" style="font-weight:600;">Claim your seat.</h3>
+                <p class="text-stone-600 font-light mt-4 leading-relaxed max-w-xl mx-auto">Tell us a little about you. If you&rsquo;re in, there&rsquo;s a short conversation to get to know you and a promise to stay non-partisan and stick to the facts&mdash;then training starts.</p>
+            </div>
+
+            <div class="bg-white border border-stone-200 rounded-2xl p-7 shadow-sm">
+                <p class="flex items-start gap-3 text-sm text-stone-600 mb-6 pb-6 border-b border-stone-200">
+                    <span class="mt-0.5 text-amber-600 shrink-0">&#9873;</span>
+                    <span>By joining, you promise to stay <strong class="text-stone-800 font-medium">non-partisan and tell the truth</strong>&mdash;the cell flags and checks claims, it doesn&rsquo;t censor them. If you&rsquo;re accepted, there&rsquo;s a short conversation before training.</span>
+                </p>
+                <!-- EveryAction / NGP VAN form (writes to the member database) -->
+                <div class="ngp-form"
+                    data-form-url="https://secure.ngpvan.com/v1/Forms/RqMcIQAeC0urkBAgC9ncvA2"
+                    data-custom-css="https://nvlupin.blob.core.windows.net/designs/CustomStylesheet_a963be5bd5a7a825e9e54f0cae6e7822f5fa33baef85268851759738ff3e18eb.css"
+                    data-fastaction-endpoint="https://fastaction.ngpvan.com"
+                    data-inline-errors="true"
+                    data-fastaction-nologin="true"
+                    data-mobile-autofocus="false">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Closing -->
+    <section class="relative py-24 border-t border-stone-200 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(16,185,129,0.10),transparent_55%)]"></div>
+        <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
+            <h2 class="mono text-amber-700 text-sm font-bold tracking-widest uppercase mb-4">Anticipate &middot; Verify &middot; Respond</h2>
+            <h3 class="display text-3xl md:text-5xl font-600 text-stone-900 tracking-tight mb-6" style="font-weight:600;">Michigan can be the proof that it can be done.</h3>
+            <p class="text-lg text-stone-600 font-light max-w-2xl mx-auto mb-9 leading-relaxed">AI is already in your job, your housing, your ballot, your phone. The companies building these systems made their choices. Now communities make theirs. The window is open. Let&rsquo;s use it.</p>
+            <a href="#apply" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-semibold px-8 py-3.5 rounded-lg text-sm transition shadow-lg shadow-amber-600/20">Join the Election Threat Cell &rarr;</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-stone-200 py-12 bg-[var(--cream-panel)]/60">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-stone-500">
+            <div class="flex items-center gap-3">
+                <img src="assets/michigan-united-logo.jpg" alt="Michigan United" width="200" height="200" class="h-8 w-8 rounded-md shrink-0">
+                <span class="font-medium text-stone-700">#RegulateAI</span>
+            </div>
+            <p class="font-light text-center">A CivicAI program. Non-partisan. Democracy with better tools.</p>
+            <a href="index.html" class="hover:text-amber-700 transition inline-flex items-center gap-1">See the FC26 engine <span class="text-xs">&#8599;</span></a>
+        </div>
+    </footer>
+
+    <script>
+    (function () {
+        // ---- Reveal on scroll ----
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(function (n) { io.observe(n); });
+
+        // ---- Triage demo ----
+        var cases = [
+            {
+                handle: '@MI_VoteAlert_2026', meta: 'New account · 3 days old · identical text on 41 profiles in 6 min',
+                post: 'BREAKING: Polling place at Lincoln Elementary in Dearborn is CLOSED today due to flooding. Go to the high school instead. SHARE before it’s too late!!',
+                answer: 'disinfo',
+                verdict: 'Disinformation',
+                why: 'A specific, false, <em>actionable</em> claim about how to vote, pushed by a fresh account with copy-pasta synchronized across dozens of profiles — the fingerprint of coordination. This is exactly what the cell exists to catch.',
+                action: 'Verify with the county clerk in minutes, then issue a clear, accurate update where the confusion is spreading. The post stays up — the truth travels with it.'
+            },
+            {
+                handle: '@dearbornmom', meta: 'Real account · 4 years old · 1 post, no amplification',
+                post: 'Reminder to everyone: don’t forget to vote this Tuesday the 4th! 🗳️',
+                answer: 'misinfo',
+                verdict: 'Misinformation (honest mistake)',
+                why: 'The date is wrong, but there’s no coordination, no brand-new account, no synced-up spread — just one neighbor who mixed up the day by accident. Intent is the dividing line.',
+                action: 'A gentle, factual correction. No alarm, no digging into who they are. We treat an honest mix-up very differently from a deliberate lie.'
+            },
+            {
+                handle: '@frustrated_voter', meta: 'Real account · normal activity',
+                post: 'TWO HOURS in line at my precinct in the pouring rain and only 3 machines working. This is a disgrace, they should be ashamed.',
+                answer: 'protected',
+                verdict: 'Protected speech',
+                why: 'Messy, angry, civic frustration — and completely legitimate. There’s no false claim about how to vote here, just a citizen’s honest experience and opinion.',
+                action: 'Nothing. Frustration, long lines, weather complaints, and political debate are protected by design. Flagging this would be exactly the overreach we refuse.'
+            }
+        ];
+        var labels = { disinfo: 'Coordinated disinformation', misinfo: 'Honest mistake (misinformation)', protected: 'Protected speech — leave it' };
+        var order = ['disinfo', 'misinfo', 'protected'];
+        var answered = 0, correct = 0;
+        var wrap = document.getElementById('triage');
+        cases.forEach(function (c, i) {
+            var card = document.createElement('div');
+            card.className = 'triage-card reveal bg-white border border-stone-200 rounded-2xl p-6 shadow-sm';
+            io.observe(card);
+            var btns = order.map(function (k) {
+                return '<button data-k="' + k + '" class="triage-btn text-left text-sm border border-stone-300 hover:border-amber-400 rounded-lg px-4 py-3 transition font-medium text-stone-700 bg-white">' + labels[k] + '</button>';
+            }).join('');
+            card.innerHTML =
+                '<div class="flex items-center gap-3 mb-3">' +
+                    '<span class="mono text-xs text-stone-400">QUEUE ITEM 0' + (i + 1) + '</span>' +
+                    '<span class="mono text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded px-2 py-0.5">flagged · needs a human</span>' +
+                '</div>' +
+                '<blockquote class="text-stone-800 leading-relaxed border-l-2 border-stone-200 pl-4 mb-2">' + c.post + '</blockquote>' +
+                '<p class="text-xs text-stone-500 mb-5"><span class="font-medium text-stone-600">' + c.handle + '</span> &middot; ' + c.meta + '</p>' +
+                '<div class="grid sm:grid-cols-3 gap-2 triage-options">' + btns + '</div>' +
+                '<div class="triage-reveal hidden mt-5 rounded-xl p-5"></div>';
+
+            card.querySelectorAll('.triage-btn').forEach(function (b) {
+                b.addEventListener('click', function () {
+                    var chose = b.getAttribute('data-k');
+                    var right = chose === c.answer;
+                    card.classList.add('answered');
+                    b.classList.add('chosen');
+                    b.classList.add(right ? 'border-emerald-500' : 'border-red-400');
+                    b.classList.add(right ? 'bg-emerald-50' : 'bg-red-50');
+                    // mark the correct one if they missed
+                    if (!right) {
+                        card.querySelector('.triage-btn[data-k="' + c.answer + '"]').classList.add('border-emerald-500', 'bg-emerald-50', 'chosen');
+                    }
+                    var rev = card.querySelector('.triage-reveal');
+                    rev.className = 'triage-reveal mt-5 rounded-xl p-5 ' + (right ? 'bg-emerald-50 border border-emerald-200' : 'bg-amber-50 border border-amber-200');
+                    rev.innerHTML =
+                        '<p class="text-sm font-semibold ' + (right ? 'text-emerald-800' : 'text-amber-800') + ' mb-1">' +
+                            (right ? '✓ Agreed — ' : 'An analyst would call this ') + c.verdict + '</p>' +
+                        '<p class="text-sm text-stone-700 font-light leading-relaxed mb-2"><strong class="font-medium">Why:</strong> ' + c.why + '</p>' +
+                        '<p class="text-sm text-stone-700 font-light leading-relaxed"><strong class="font-medium">The cell’s move:</strong> ' + c.action + '</p>';
+                    rev.classList.remove('hidden');
+                    answered++; if (right) correct++;
+                    if (answered === cases.length) {
+                        document.getElementById('triage-correct').textContent = correct;
+                        var s = document.getElementById('triage-score'); s.classList.remove('hidden'); s.classList.add('in');
+                    }
+                });
+            });
+            wrap.appendChild(card);
+        });
+
+        // ---- Skill ladder ----
+        var rungs = [
+            { t: 'Fact-Checker', d: 'You start where every case starts: the actual claim. You learn to boil a post down to what it’s really saying, then check it against official local sources — the clerk’s office, the real voting rules, the actual record. Does this claim even match how voting works here?', skills: ['Checking sources', 'Pinning down the claim', 'How local elections work'] },
+            { t: 'Persuasion Analyst', d: 'Next you learn to read the <em>how</em>. You learn to name the trick a post is using to push your buttons — fake urgency, rage bait — and, most important, how to tell a manufactured campaign apart from a real person who’s just frustrated.', skills: ['Spotting the technique', 'Reading emotional pressure', 'Influence vs. real opinion'] },
+            { t: 'Pattern Analyst', d: 'Now you read the whole network, not just one post. You learn to spot “copy-pasta” — the same text pasted across dozens of accounts — plus suspiciously synced timing: the signs of a fake crowd versus a real one. Then you trace it back to “Patient Zero,” the account that started it.', skills: ['Spotting coordination', 'Tracing a network', 'Online research basics'] },
+            { t: 'Specialist', d: 'You lead. You take charge of a county or region, train new volunteers, and help turn findings into the clear reports the steering committee acts on. By now you’re part of what holds a statewide network together.', skills: ['Writing responses', 'Training others', 'Owning a region'] }
+        ];
+        var detail = document.getElementById('ladder-detail');
+        function showRung(i) {
+            document.querySelectorAll('.ladder-btn').forEach(function (b) {
+                var on = b.getAttribute('data-rung') == i;
+                b.classList.toggle('border-amber-400', on);
+                b.classList.toggle('bg-amber-50', on);
+                b.classList.toggle('border-stone-200', !on);
+                b.classList.toggle('bg-white', !on);
+            });
+            var r = rungs[i];
+            detail.innerHTML =
+                '<span class="mono text-xs text-amber-700 uppercase tracking-widest">Rung 0' + (i + 1) + '</span>' +
+                '<h4 class="display text-2xl text-stone-900 mt-1 mb-3" style="font-weight:600;">' + r.t + '</h4>' +
+                '<p class="text-stone-600 font-light leading-relaxed mb-5">' + r.d + '</p>' +
+                '<div class="flex flex-wrap gap-2">' + r.skills.map(function (s) {
+                    return '<span class="text-xs bg-stone-100 border border-stone-200 rounded-full px-3 py-1 text-stone-600">' + s + '</span>';
+                }).join('') + '</div>';
+        }
+        document.querySelectorAll('.ladder-btn').forEach(function (b) {
+            b.addEventListener('click', function () { showRung(+b.getAttribute('data-rung')); });
+        });
+        showRung(0);
+
+    })();
+    </script>
+</body>
+</html>

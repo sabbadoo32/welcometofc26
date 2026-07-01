@@ -4,7 +4,7 @@
   "description": "FC26 Suite landing page — anticipatory social intelligence for elections.",
   "scripts": {
     "build:css": "tailwindcss -i src/input.css -o assets/tailwind.css --minify",
-    "build": "npm run build:css && rm -rf dist && mkdir -p dist && cp index.html dist/ && cp -r assets dist/"
+    "build": "npm run build:css && rm -rf dist && mkdir -p dist && cp index.html join.html shift.html dist/ && cp -r assets dist/"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,41 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "fc26-dashboard",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "cd /Users/sebastianjames/.gemini/antigravity/FC26_bot/fc26-bot8-dashboard && npm run dev"],
+      "port": 8080
+    },
+    {
+      "name": "fc26-operator",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "export FC26_BQ_KEY=/Users/sebastianjames/.gemini/antigravity/FC26_bot/scratch/orchestrator-bot/service_account.json && cd /Users/sebastianjames/.gemini/antigravity/FC26_bot/fc26-operator-console && npm run dev"],
+      "port": 8090
+    },
+    {
+      "name": "fc26-transparency",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "export FC26_BQ_KEY=/Users/sebastianjames/.gemini/antigravity/FC26_bot/scratch/orchestrator-bot/service_account.json && cd /Users/sebastianjames/.gemini/antigravity/FC26_bot/fc26-transparency && npm run dev"],
+      "port": 8091
+    },
+    {
+      "name": "fc26-gov-intel",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "export FC26_BQ_KEY=/Users/sebastianjames/.gemini/antigravity/FC26_bot/scratch/orchestrator-bot/service_account.json && cd /Users/sebastianjames/.gemini/antigravity/FC26_bot/fc26-gov-intel && npm run dev"],
+      "port": 8092
+    },
+    {
+      "name": "fc26-welcome",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "cd /Users/sebastianjames/Documents/Apps/FC26 && python3 -m http.server 8095"],
+      "port": 8095
+    },
+    {
+      "name": "fc26-persuasion-terrain",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "cd /Users/sebastianjames/.gemini/antigravity/FC26_bot/fc26-persuasion-terrain && npm run dev"],
+      "port": 8093
+    }
+  ]
+}
