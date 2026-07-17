@@ -26,9 +26,15 @@
       "port": 8092
     },
     {
+      "name": "fc26-front-door",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "cd /Users/sebastianwjames/Documents/Apps/fc26-front-door && python3 -m http.server 8096"],
+      "port": 8096
+    },
+    {
       "name": "fc26-welcome",
       "runtimeExecutable": "bash",
-      "runtimeArgs": ["-c", "cd /Users/sebastianjames/Documents/Apps/FC26 && python3 -m http.server 8095"],
+      "runtimeArgs": ["-c", "cd /Users/sebastianwjames/Documents/Apps/FC26 && python3 -m http.server 8095"],
       "port": 8095
     },
     {
