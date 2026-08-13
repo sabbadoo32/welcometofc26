@@ -20,4 +20,4 @@ jobs:
       - name: Deploy to Netlify (production)
         run: npx --yes netlify-cli@17 deploy --prod --dir="dist" --site="1fe08e7e-8d7e-410b-9833-193704dda74e" --message "CI deploy ${GITHUB_SHA}"
         env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.FC26 }}
